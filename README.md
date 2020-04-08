@@ -24,5 +24,8 @@ pip install grpcio-tools
    ```shell
    python -m grpc_tools.protoc -I. --python_out=.. --grpc_python_out=.. demo.proto
    ```
+- `-I`表示搜索proto文件中被导入文件的目录
+- `--python_out`表示保存生成Python文件的目录，生成的文件中包含接口定义中的数据类型
+- `--grpc_python_out`表示保存生成Python文件的目录，生成的文件中包含接口定义中的服务类型
 
 2. 编写补充服务器和客户端逻辑代码 
