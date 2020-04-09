@@ -34,8 +34,8 @@ def invoke_calculate(stub):
         print(f"{e.code()}: {e.details()}")
 
 def invoke_get_subjects(stub):
-    city = demo_pb2.City(name="beijing")
-    subjects = stub.GetSubjects(city)
+    course_category = demo_pb2.Course_category(name="核心课")
+    subjects = stub.GetSubjects(course_category)
     for subject in subjects:
         print(subject.name)
 

@@ -18,7 +18,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=b'\n\ndemo.proto\"}\n\x04Work\x12\x0c\n\x04num1\x18\x01 \x01(\x05\x12\x0c\n\x04num2\x18\x02 \x01(\x05\x12\x1b\n\x02op\x18\x03 \x01(\x0e\x32\x0f.Work.Operation\"<\n\tOperation\x12\x07\n\x03\x41\x44\x44\x10\x00\x12\x0c\n\x08SUBTRACT\x10\x01\x12\x0c\n\x08MULTIPLY\x10\x02\x12\n\n\x06\x44IVIDE\x10\x03\"\x15\n\x06Result\x12\x0b\n\x03val\x18\x01 \x01(\x05\"\x14\n\x04\x43ity\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x17\n\x07Subject\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x14\n\x05\x44\x65lta\x12\x0b\n\x03val\x18\x01 \x01(\x05\"\x12\n\x03Sum\x12\x0b\n\x03val\x18\x01 \x01(\x05\"\x15\n\x06Number\x12\x0b\n\x03val\x18\x01 \x01(\x05\"#\n\x06\x41nswer\x12\x0b\n\x03val\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t2\x90\x01\n\x04\x44\x65mo\x12\x1d\n\tCalculate\x12\x05.Work\x1a\x07.Result\"\x00\x12\"\n\x0bGetSubjects\x12\x05.City\x1a\x08.Subject\"\x00\x30\x01\x12\x1e\n\nAccumulate\x12\x06.Delta\x1a\x04.Sum\"\x00(\x01\x12%\n\x0bGuessNumber\x12\x07.Number\x1a\x07.Answer\"\x00(\x01\x30\x01\x62\x06proto3'
+  serialized_pb=b'\n\ndemo.proto\"}\n\x04Work\x12\x0c\n\x04num1\x18\x01 \x01(\x05\x12\x0c\n\x04num2\x18\x02 \x01(\x05\x12\x1b\n\x02op\x18\x03 \x01(\x0e\x32\x0f.Work.Operation\"<\n\tOperation\x12\x07\n\x03\x41\x44\x44\x10\x00\x12\x0c\n\x08SUBTRACT\x10\x01\x12\x0c\n\x08MULTIPLY\x10\x02\x12\n\n\x06\x44IVIDE\x10\x03\"\x15\n\x06Result\x12\x0b\n\x03val\x18\x01 \x01(\x05\"\x1f\n\x0f\x43ourse_category\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x17\n\x07Subject\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x14\n\x05\x44\x65lta\x12\x0b\n\x03val\x18\x01 \x01(\x05\"\x12\n\x03Sum\x12\x0b\n\x03val\x18\x01 \x01(\x05\"\x15\n\x06Number\x12\x0b\n\x03val\x18\x01 \x01(\x05\"#\n\x06\x41nswer\x12\x0b\n\x03val\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t2\x9b\x01\n\x04\x44\x65mo\x12\x1d\n\tCalculate\x12\x05.Work\x1a\x07.Result\"\x00\x12-\n\x0bGetSubjects\x12\x10.Course_category\x1a\x08.Subject\"\x00\x30\x01\x12\x1e\n\nAccumulate\x12\x06.Delta\x1a\x04.Sum\"\x00(\x01\x12%\n\x0bGuessNumber\x12\x07.Number\x1a\x07.Answer\"\x00(\x01\x30\x01\x62\x06proto3'
 )
 
 
@@ -131,15 +131,15 @@ _RESULT = _descriptor.Descriptor(
 )
 
 
-_CITY = _descriptor.Descriptor(
-  name='City',
-  full_name='City',
+_COURSE_CATEGORY = _descriptor.Descriptor(
+  name='Course_category',
+  full_name='Course_category',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='City.name', index=0,
+      name='name', full_name='Course_category.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -158,7 +158,7 @@ _CITY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=164,
-  serialized_end=184,
+  serialized_end=195,
 )
 
 
@@ -188,8 +188,8 @@ _SUBJECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=186,
-  serialized_end=209,
+  serialized_start=197,
+  serialized_end=220,
 )
 
 
@@ -219,8 +219,8 @@ _DELTA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=211,
-  serialized_end=231,
+  serialized_start=222,
+  serialized_end=242,
 )
 
 
@@ -250,8 +250,8 @@ _SUM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=233,
-  serialized_end=251,
+  serialized_start=244,
+  serialized_end=262,
 )
 
 
@@ -281,8 +281,8 @@ _NUMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=253,
-  serialized_end=274,
+  serialized_start=264,
+  serialized_end=285,
 )
 
 
@@ -319,15 +319,15 @@ _ANSWER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=276,
-  serialized_end=311,
+  serialized_start=287,
+  serialized_end=322,
 )
 
 _WORK.fields_by_name['op'].enum_type = _WORK_OPERATION
 _WORK_OPERATION.containing_type = _WORK
 DESCRIPTOR.message_types_by_name['Work'] = _WORK
 DESCRIPTOR.message_types_by_name['Result'] = _RESULT
-DESCRIPTOR.message_types_by_name['City'] = _CITY
+DESCRIPTOR.message_types_by_name['Course_category'] = _COURSE_CATEGORY
 DESCRIPTOR.message_types_by_name['Subject'] = _SUBJECT
 DESCRIPTOR.message_types_by_name['Delta'] = _DELTA
 DESCRIPTOR.message_types_by_name['Sum'] = _SUM
@@ -349,12 +349,12 @@ Result = _reflection.GeneratedProtocolMessageType('Result', (_message.Message,),
   })
 _sym_db.RegisterMessage(Result)
 
-City = _reflection.GeneratedProtocolMessageType('City', (_message.Message,), {
-  'DESCRIPTOR' : _CITY,
+Course_category = _reflection.GeneratedProtocolMessageType('Course_category', (_message.Message,), {
+  'DESCRIPTOR' : _COURSE_CATEGORY,
   '__module__' : 'demo_pb2'
-  # @@protoc_insertion_point(class_scope:City)
+  # @@protoc_insertion_point(class_scope:Course_category)
   })
-_sym_db.RegisterMessage(City)
+_sym_db.RegisterMessage(Course_category)
 
 Subject = _reflection.GeneratedProtocolMessageType('Subject', (_message.Message,), {
   'DESCRIPTOR' : _SUBJECT,
@@ -399,8 +399,8 @@ _DEMO = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=314,
-  serialized_end=458,
+  serialized_start=325,
+  serialized_end=480,
   methods=[
   _descriptor.MethodDescriptor(
     name='Calculate',
@@ -416,7 +416,7 @@ _DEMO = _descriptor.ServiceDescriptor(
     full_name='Demo.GetSubjects',
     index=1,
     containing_service=None,
-    input_type=_CITY,
+    input_type=_COURSE_CATEGORY,
     output_type=_SUBJECT,
     serialized_options=None,
   ),

@@ -23,6 +23,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Python/Bilibili/Algorithms" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.client">
@@ -88,7 +89,8 @@
       <option name="presentableId" value="Default" />
       <updated>1586268662394</updated>
       <workItem from="1586268663686" duration="839000" />
-      <workItem from="1586272304426" duration="7362000" />
+      <workItem from="1586272304426" duration="7995000" />
+      <workItem from="1586400450348" duration="1561000" />
     </task>
     <servers />
   </component>
@@ -96,29 +98,33 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1586332021446">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1586337716950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586332021446" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1586332021446">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586337716950" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1586402150309">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586332021446" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1586332021445">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586402150309" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1586402150309">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586332021445" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1586332021446">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586402150309" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1586402150309">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586332021446" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586402150309" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1586402150309">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586402150309" />
     <state x="270" y="53" key="SettingsEditor" timestamp="1586273562943">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="53" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586273562943" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/grpc_project$client.coverage" NAME="client Coverage Results" MODIFIED="1586332017726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/grpc_project$server.coverage" NAME="server Coverage Results" MODIFIED="1586331921783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/grpc_project$client.coverage" NAME="client Coverage Results" MODIFIED="1586402142678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/grpc_project$server.coverage" NAME="server Coverage Results" MODIFIED="1586402122928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

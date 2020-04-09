@@ -9,10 +9,10 @@ from concurrent import futures
 class DemoServicer(demo_pb2_grpc.DemoServicer):
 
     def __init__(self):
-        self.city_subjects_db = {
-            "beijing": ["python", "c++", "go", "java", "php"],
-            "shanghai": ["python", "c++", "go", "c"],
-            "shenzhen": ["python", "vue", "c"]
+        self.course_category_db = {
+            "通识课": ["微积分", "线性代数", "思修", "毛概", "大学物理"],
+            "核心课": ["操作系统", "计算机网络", "算法设计与分析", "数据结构"],
+            "选修课": ["编译原理", "java程序设计", "软件工程", "数据库概论", "高级程序设计"]
         }
         self.answers = list(range(10))
 
@@ -39,8 +39,8 @@ class DemoServicer(demo_pb2_grpc.DemoServicer):
             return demo_pb2.Result()
 
     def GetSubjects(self, request, context):
-        city = request.name
-        subjects = self.city_subjects_db.get(city)
+        course_category = request.name
+        subjects = self.course_category_db.get(course_category)
         for subject in subjects:
             yield demo_pb2.Subject(name=subject)
 

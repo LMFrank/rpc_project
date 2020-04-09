@@ -18,7 +18,7 @@ message Result {
     int32 val = 1;
 }
 
-message City {
+message Course_category {
     string name = 1;
 }
 
@@ -49,8 +49,8 @@ service Demo {
     rpc Calculate(Work) returns (Result) {}
 
     // server streaming rpc
-    // 根据城市获取课程
-    rpc GetSubjects(City) returns (stream Subject) {}
+    // 根据课程类别获取课程
+    rpc GetSubjects(Course_category) returns (stream Subject) {}
 
     // client streaming rpc
     // 客户端发送多个请求数据，服务端返回这些数据的累计和

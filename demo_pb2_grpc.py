@@ -20,7 +20,7 @@ class DemoStub(object):
                 )
         self.GetSubjects = channel.unary_stream(
                 '/Demo/GetSubjects',
-                request_serializer=demo__pb2.City.SerializeToString,
+                request_serializer=demo__pb2.Course_category.SerializeToString,
                 response_deserializer=demo__pb2.Subject.FromString,
                 )
         self.Accumulate = channel.stream_unary(
@@ -48,7 +48,7 @@ class DemoServicer(object):
 
     def GetSubjects(self, request, context):
         """server streaming rpc
-        根据城市获取课程
+        根据课程类别获取课程
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -80,7 +80,7 @@ def add_DemoServicer_to_server(servicer, server):
             ),
             'GetSubjects': grpc.unary_stream_rpc_method_handler(
                     servicer.GetSubjects,
-                    request_deserializer=demo__pb2.City.FromString,
+                    request_deserializer=demo__pb2.Course_category.FromString,
                     response_serializer=demo__pb2.Subject.SerializeToString,
             ),
             'Accumulate': grpc.stream_unary_rpc_method_handler(
@@ -130,7 +130,7 @@ class Demo(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_stream(request, target, '/Demo/GetSubjects',
-            demo__pb2.City.SerializeToString,
+            demo__pb2.Course_category.SerializeToString,
             demo__pb2.Subject.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)
