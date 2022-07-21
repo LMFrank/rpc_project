@@ -1,31 +1,50 @@
-## simple_grpc
+## simple_rpc
 
-gRPC是由Google公司开源的高性能RPC框架，它支持多语言、多平台的使用。它的消息协议使用Google开源的Protocol Buffers协议机制（proto3），传输使用HTTP/2标准，支持双向流和连接多路复用。
+RPC的设计思想是力图**使远程调用中的通讯细节对于使用者透明**，调用双方无需关心网络通讯的具体实现。因而实现RPC要进行一定的封装。 
 
-### 接口类型
+### 调用流程
 
-- **Unary RPC** （一元RPC）
-- **Server Streaming RPC** （ 服务器流式RPC）
-- **Client Streaming RPC** （ 客户端流式RPC）
-- **Bidirectional Streaming RPC** （双向流式RPC）
+![RPC结构](https://github.com/LMFrank/simple_rpc/blob/master/images/RPC1.png)
 
-### 安装依赖
+1. Client在本地发起调用
+2. Client Stub收到调用后负责将调用的方法及参数等按照消息协议打包并进行网络发送
+3. Server Stub收到后按照消息协议拆包，并且根据方法名和参数进行本地调用
+4. Server本地调用执行后将执行结果传给Server Stub
+5. Server Stub将返回结果按照消息协议打包并进行网络发送
+6. Client Stub收到消息后进行拆包将结果返回给Client
+7. Client得到本次RPC调用的结果
 
-```shell
-pip install grpcio-tools
-```
+### 二进制消息协议的实现
 
-### 使用方法
+#### 调用请求消息
 
-在本项目中，使用4个不同的案例演示4种接口类型的调用。
+- 方法名为`divide`
 
-1. 使用Protocol Buffers（proto3）的IDL接口定义语言定义接口服务，编写在文本文件（以`.proto`为后缀名）中，然后运行以下命令编译生成python代码
+- 第1个调用参数为整型int，名为`num1`
 
-   ```shell
-   python -m grpc_tools.protoc -I. --python_out=.. --grpc_python_out=.. demo.proto
-   ```
-- `-I`表示搜索proto文件中被导入文件的目录
-- `--python_out`表示保存生成Python文件的目录，生成的文件中包含接口定义中的数据类型
-- `--grpc_python_out`表示保存生成Python文件的目录，生成的文件中包含接口定义中的服务类型
+- 第2个调用参数为整型int，名为`num2`，默认值为1
 
-2. 编写补充服务器和客户端逻辑代码 
+![调用请求消息](https://github.com/LMFrank/simple_rpc/blob/master/images/RPC2.png)
+
+#### 调用返回消息
+
+- 正常返回float类型
+- 错误会抛出`InvalidOperation`异常
+
+![调用返回消息](https://github.com/LMFrank/simple_rpc/blob/master/images/RPC3.png)
+
+### RPC传输完整实现
+
+- 传输方式：TCP
+
+- 二进制作为数据传输格式
+
+  - 使用`struct`模块，[使用文档]( https://docs.python.org/3/library/struct.html#format-characters )
+
+- 加入了多线程的RPC服务器
+
+- 项目结构：
+
+  ![项目结构](https://github.com/LMFrank/simple_rpc/blob/master/images/treefile.bmp)
+
+- 使用方法：先开启`server`目录下的main.py再开启`client`目录下的main.py
